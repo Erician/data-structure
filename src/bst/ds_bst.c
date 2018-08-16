@@ -156,7 +156,7 @@ Successor(const Bst* bst, const BstNode* bst_node){
         bst_node = parent;
         parent = bst_node -> parent_;
     }
-    return parent == NULL ? parent : parent;
+    return parent;
 }
 static void* 
 Bst_Successor(const Bst* bst, const void* node, \
