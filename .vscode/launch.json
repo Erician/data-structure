@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/obj/ds_bst_ut",
+            "program": "${workspaceFolder}/obj/ds_rbt_ut",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

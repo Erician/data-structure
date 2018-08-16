@@ -6,16 +6,19 @@ OBJDIR = ../obj
 
 #to make objects
 include bst/makefile
+include rbt/makefile
 include cdll/makefile
 include node/makefile
 #unittest
 include unittest/makefile
 include unittest/bst/makefile
+include unittest/rbt/makefile
 include unittest/cdll/makefile
 
 
 #All objects
 OBJS = $(OBJDIR)/ds_bst.o 
+OBJS += $(OBJDIR)/ds_rbt.o
 OBJS += $(OBJDIR)/ds_cdll.o
 
 JUNK = *~ $(OBJDIR)/*.o $(OBJDIR)/*.a  
@@ -40,7 +43,8 @@ ut-all: $(UT)
 
 ut-bst: $(OBJDIR)/ds_bst_ut
 	./$(OBJDIR)/ds_bst_ut
-
+ut-rbt: $(OBJDIR)/ds_rbt_ut
+	./$(OBJDIR)/ds_rbt_ut
 ut-cdll: $(OBJDIR)/ds_cdll_ut
 	./$(OBJDIR)/ds_cdll_ut
 
