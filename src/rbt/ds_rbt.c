@@ -307,12 +307,12 @@ Erase_Fixup(Rbt* rbt, RbtNode* x){
                 x = rbt->root_;
             }
         }else{
-            RbtNode* w = x->parent_->right_;
+            RbtNode* w = x->parent_->left_;
             if(w->color_ == RbtNode_Const.Color_.RED_){
                 w->color_ = RbtNode_Const.Color_.BLACK_;
                 x->parent_->color_ = RbtNode_Const.Color_.RED_;
                 Right_Rotate(rbt, x->parent_);
-                w = x->parent_->right_;
+                w = x->parent_->left_;
             }
             if(w->right_->color_ == RbtNode_Const.Color_.BLACK_\
                 && w->left_->color_ == RbtNode_Const.Color_.BLACK_){
