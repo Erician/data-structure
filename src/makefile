@@ -5,12 +5,14 @@ default: $(PRODUCTS)
 OBJDIR = ../obj
 
 #to make objects
+include bpt/makefile
 include bst/makefile
 include rbt/makefile
 include cdll/makefile
 include node/makefile
 #unittest
 include unittest/makefile
+include unittest/bpt/makefile
 include unittest/bst/makefile
 include unittest/rbt/makefile
 include unittest/cdll/makefile
@@ -20,6 +22,7 @@ include unittest/cdll/makefile
 OBJS = $(OBJDIR)/ds_bst.o 
 OBJS += $(OBJDIR)/ds_rbt.o
 OBJS += $(OBJDIR)/ds_cdll.o
+OBJS += $(OBJDIR)/ds_bpt.o
 
 JUNK = *~ $(OBJDIR)/*.o $(OBJDIR)/*.a  
 
@@ -41,6 +44,8 @@ ut-all: $(UT)
 	./$(OBJDIR)/ds_bst_ut
 	./$(OBJDIR)/ds_cdll_ut
 
+ut-bpt: $(OBJDIR)/ds_bpt_ut
+	./$(OBJDIR)/ds_bpt_ut
 ut-bst: $(OBJDIR)/ds_bst_ut
 	./$(OBJDIR)/ds_bst_ut
 ut-rbt: $(OBJDIR)/ds_rbt_ut

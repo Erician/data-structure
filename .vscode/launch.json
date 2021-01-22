@@ -5,15 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "gcc-7 - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/obj/ds_rbt_ut",
+            "program": "${workspaceFolder}/obj/ds_bpt_ut",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "console": "externalTerminal",
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -21,7 +21,9 @@
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "preLaunchTask": "C/C++: gcc-7 build active file",
+            "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
 }
