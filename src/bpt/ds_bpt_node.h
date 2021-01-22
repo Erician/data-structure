@@ -50,7 +50,6 @@ typedef struct BptNode{
 	struct BptNode* parent_;
 	bool is_leaf_;
 	int num_keys_;
-	struct BptNode *next_;
 }BptNode;
 
 typedef struct BptNodeOperations{

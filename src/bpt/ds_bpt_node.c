@@ -22,7 +22,6 @@ BptNode_Constructor(void){
     bpt_node->is_leaf_ = false;
     bpt_node->num_keys_ = 0;
     bpt_node->parent_ = NULL;
-    bpt_node->next_ = NULL;
     return bpt_node;
 }
 
